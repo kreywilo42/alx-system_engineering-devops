@@ -7,6 +7,15 @@ server {
 	index index.html index.htm index.nginx-debian.html;
 
 	server_name 127.0.0.1 localhost;
+location / {
+	proxy_pass http://0.0.0.0:5003/2-hbnb;
+	}
+location /static {
+        proxy_pass http://0.0.0.0:5003;
+        }
+location /api/ {
+	proxy_pass http://0.0.0.0:5002;
+	}
 location /airbnb-dynamic/number_odd_or_even/ {
         rewrite /airbnb-dynamic/(.*) $1 break;
         proxy_pass http://0.0.0.0:5001/number_odd_or_even;
@@ -25,7 +34,7 @@ internal;
 }
 rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
 
-        location / {
-                try_files $uri $uri/ =404;
-        }
+#        location / {
+#                try_files $uri $uri/ =404;
+#        }
 }
