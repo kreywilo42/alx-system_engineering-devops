@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#A shell script that display the content of a directory without the initial characters
+
+for i in *
+do 
+	echo "$i" | cut -d'-' -f2
+done

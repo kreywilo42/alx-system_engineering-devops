@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#This bash script will print "Best School" to the STDOUT 10 times
+
+num=10
+until [ $num -lt 1 ]
+do 
+	echo "Best School"
+	((num=num-1))
+done
