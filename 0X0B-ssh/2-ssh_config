@@ -1,0 +1,4 @@
+FowardAgent yes
+RSAAuthentication no
+PasswordAuthentication no
+IdentifyFile ~/.ssh/school

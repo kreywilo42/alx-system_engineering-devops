@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Exports data in the JSON format"""
+"""Export data in the JSON format"""
 
 if __name__ == "__main__":
 
