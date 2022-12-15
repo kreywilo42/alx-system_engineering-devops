@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-#This bash script will print "Best School" to the STDOUT 10 times
-
-num=10
-until [ $num -lt 1 ]
-do 
+# A script that print Best School using until loop
+i=1
+until [ $i -gt 10 ]
+do
 	echo "Best School"
-	((num=num-1))
+	i=$((i+=1))
 done

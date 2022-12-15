@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
-#A very interesting piss of code
+# A bash script that does something
 
-sudo touch /var/run/myscript.pid
-sudo bash -c 'echo $$ > /var/run/myscript.pid'
+terminator(){
+	rm /var/run/myscript.pid
+	exit
+}
+
+echo "$$" > /var/run/myscript.pid
+
 while true
 do
-echo "to inifinity and beyond"
-sleep 2
-trap 'echo "I hate the kill command"; sudo rm /var/run/myscript.pid; exit' SIGTERM
-trap 'echo "Y U no love me?!"' SIGINT
-trap 'sudo rm /var/run/myscript.pid; exit' SIGQUIT
+	echo "To infinity and beyond"
+	sleep 2
+	trap 'echo "Y U no love me?!"' SIGINT
+	trap 'echo "I hate the kill command" && terminator' SIGTERM
+	trap 'terminator' SIGQUIT
 done

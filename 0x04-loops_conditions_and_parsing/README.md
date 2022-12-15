@@ -1,1 +1,1 @@
-This directory contains bash source files and answers for my alx projects
+Project on Loops, Conditionals and Parsing

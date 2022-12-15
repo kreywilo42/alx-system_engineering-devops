@@ -1,1 +1,1 @@
-This directory contains more networking basics commands and source files
+Project on Networking Basics 2

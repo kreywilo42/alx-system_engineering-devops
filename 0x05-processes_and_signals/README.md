@@ -1,1 +1,1 @@
-This directory contains bash scripts for system processes and signals
+Project on Processes and Signals in Bash Scripting
