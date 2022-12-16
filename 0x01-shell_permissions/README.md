@@ -1,1 +1,1 @@
-Shell Permissions Excercise
+Scripts to execute shell permissions
