@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# A bash script that listens to port
-netstat -lp
