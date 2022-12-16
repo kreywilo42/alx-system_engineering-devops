@@ -1,1 +1,1 @@
-my shell permission project
+This folder contains projects on file permissions
