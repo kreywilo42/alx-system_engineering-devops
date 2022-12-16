@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-#A bash script that prints using a while loop
-i=1
-while [ $i -le 10 ]
-do
-	echo "Best School"
-	i=$((i+=1))
-done
