@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#A bash script that prints the contents of the current directory
+#Where only the part of the name after the first dash is displayed
+command=$(ls)
+for i in $command
+do
+	echo "$i" | cut -d '-' -f2
+done

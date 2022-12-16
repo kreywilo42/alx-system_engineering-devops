@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# A script that starts an nginx server and set the
+# port to 80
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
