@@ -1,1 +1,0 @@
-This Directory contains screenshots and source files for alx web infastructure design project
