@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#display all ip's on the computer
+hostname -I

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#displays information about the specified subdomain
+#/etc/letsencrypt/live/www.nginx-server.tech/fullchain.pem
+#/etc/letsencrypt/live/www.nginx-server.tech/privkey.pem
+if (($# == 1))
+then
+	subdomain=(www lb-01 web-01 web-02)
+else
+	subdomain=("$2")
+fi
+
+domain () {
+	for i in "${subdomain[@]}"
+	do
+	record=$(dig $i.$1 | awk 'f{print $4;f=0} /;; ANSWER SECTION:/{f=1}')
+	ip=$(dig $i.$1 | awk 'f{print $5;f=0} /;; ANSWER SECTION:/{f=1}')
+	echo The subdomain $i is a $record record and points to $ip
+	done
+}
+
+domain $1
